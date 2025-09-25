@@ -12,7 +12,7 @@ print(f"Social points: {social_points}")
 print(f" stress Level.. {stress_level}")
 
 print("Choose your recovery time:")
-print("A)  8hours")
+print("A)  8 hours")
 print("B) 10 hours")
 print("C)  4 hours")
 choice = input("Enter choice: ")
