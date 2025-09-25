@@ -32,6 +32,8 @@ elif choice == "C":
         print("YOU FAILED CLASS...")
     elif current_gpa >= 2.7:
         stress_level = stress_level + 5
+else:
+    print("invalid")
 
 #Step 3: Study strategy Decisiom 
 #Player chooses a recovery time and it correspondes to gpa output
