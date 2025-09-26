@@ -81,3 +81,43 @@ print(f"Final GPA: {current_gpa}")
 print(f"Final Study hours: {study_hours}")
 print(f"Final Social points: {social_points}")
 print(f"Final Stress Level: {stress_level}")
+
+Cleaning = ["Bedroom, Kitchen, Bathroom"]
+Cleaning_choice = input()
+if Cleaning_choice in Cleaning:
+    print(f"\nValid choice: Taking time for {Cleaning_choice}.")
+
+    if (stress_level >= 100) and (social_points < 40):
+        print("Strategy: High stress and low social life! This recovery needs to be highly effective.")
+        if Cleaning_choice == "Sleeping":
+            stress_level -= 20
+        elif Cleaning_choice == "Socializing":
+            social_points += 15
+        else:
+            if Cleaning_choice not in ["Sleeping", "Socializing"]:
+                stress_level += 5
+        print(f"Updated Stress: {stress_level}, Updated Social Points: {social_points}")
+
+    elif (current_gpa >= 3.8) or (study_hours > 25):
+        print("Strategy: You're performing well. This recovery choice will enhance your balance.")
+        if Cleaning_choice == "Working out":
+            current_gpa += 0.05
+        elif Cleaning_choice == "Gaming":
+            if not (current_gpa < 3.0):
+                study_hours -= 2
+
+    else:
+        print("Strategy: Moderate stats. This recovery choice provides steady benefits.")
+        if Cleaning_choice == "Sleeping":
+            stress_level -= 10
+        elif Cleaning_choice == "Socializing":
+            social_points += 5
+
+elif Cleaning_choice not in recovery_options:
+    print(f"\nInvalid choice: {Cleaning} is not a valid recovery option. Please choose from the list.")
+
+print("Current Stats After Decision 3")
+print(f"Final GPA: {current_gpa}")
+print(f"Final Study hours: {study_hours}")
+print(f"Final Social points: {social_points}")
+print(f"Final Stress Level: {stress_level}")
